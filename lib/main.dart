@@ -55,8 +55,10 @@ class _MyAppState extends State<MyApp> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
             children: list_task
-                .map((item) =>
-                    taskWordToDo(item: item, handleDelete: _handleDeleteTap))
+                .map((item) => taskWordToDo(
+                    item: item,
+                    handleDelete: _handleDeleteTap,
+                    index: list_task.indexOf(item)))
                 .toList()),
       ),
       floatingActionButton: FloatingActionButton(
